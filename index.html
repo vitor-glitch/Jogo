@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Space Blaster</title>
+  <link rel="icon" href="icon-site.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="wrap">
+  <div id="hud">
+    <div class="hb" id="sBox">SCORE: 0</div>
+    <div id="puBar">
+      <div class="ps" id="p0">🔥</div>
+      <div class="ps" id="p1">⚡</div>
+      <div class="ps" id="p2">🛡️</div>
+      <div class="ps" id="p3">💥</div>
+      <div class="ps" id="p4">🚀</div>
+      <div class="ps" id="p5">💀</div>
+      <div class="ps" id="p6">⏱️</div>
+      <div class="ps" id="p7">🔓</div>
+      <div class="ps" id="p8">🎯</div>
+      <div class="ps" id="p9">💪</div>
+    </div>
+    <div class="hb" id="wBox">ONDA: 1</div>
+    <div class="hb" id="lBox">VIDAS: ♥♥♥</div>
+  </div>
+
+  <div id="bossRow">
+    <div id="bossLbl">CHEFE DA ONDA</div>
+    <div id="bossBar"><div id="bossFill"></div></div>
+  </div>
+
+  <div style="position:fixed;width:100%;height:100%;top:0;left:0;z-index:1">
+    <canvas id="gc"></canvas>
+    <div id="waveMsg"></div>
+  </div>
+
+    <div id="ov">
+      <h2>SPACE BLASTER</h2>
+      <p>Modo infinito — dificuldade cresce a cada onda</p>
+      <p style="font-size:11px;color:#555">
+        Mouse: mover | Clique/Espaço: atirar | B: bomba
+      </p>
+
+      <div id="diffRow">
+        <button class="dbtn sel" onclick="setDiff('facil',this)">Fácil</button>
+        <button class="dbtn" onclick="setDiff('normal',this)">Normal</button>
+        <button class="dbtn" onclick="setDiff('dificil',this)">Difícil</button>
+      </div>
+
+      <input id="nameInput" placeholder="Digite seu nome"><br>
+      <div id="leaderboard"></div>
+
+      <button class="btn" onclick="startGame()">JOGAR</button>
+      <button class="btn" onclick="clearLeaderboard()" style="background:#d9534f;margin-top:10px">LIMPAR PLACAR</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
